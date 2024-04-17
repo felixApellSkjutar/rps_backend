@@ -15,3 +15,9 @@ app.use(cors());
 
 const morgan = require('morgan');
 app.use(morgan('dev'));
+
+const api = require("./routes/api.js");
+
+app.use("/", api);
+
+app.listen((PORT), () => console.log("Server is running"));
